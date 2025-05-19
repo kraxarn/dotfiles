@@ -1,0 +1,57 @@
+[[profile]]
+name = "docked"
+exec = ["notify-send shikane \"You are now docked\""]
+
+[[profile.output]]
+enable = true
+search = ["n/DP-[1-9]"]
+mode = "2560x1440@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = false
+search = ["n/eDP-[1-9]"]
+
+[[profile.output]]
+enable = true
+search = ["n/HDMI-[A-Z]-[1-9]"]
+mode = "2560x1440@75Hz"
+position = "2560,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile]]
+name = "presenting"
+exec = [
+  "wl-present mirror eDP-1 --fullscreen-output HDMI-A-1 --fullscreen",
+  "notify-send shikane \"You are now presenting\""
+]
+
+[[profile.output]]
+enable = true
+search = ["n/eDP-[1-9]"]
+mode = "1920x1080@60Hz"
+position = "0,0"
+scale = 1.0
+
+[[profile.output]]
+enable = true
+search = ["n/HDMI-[A-Z]-[1-9]"]
+mode = "1920x1080@60Hz"
+position = "1920,0"
+scale = 1.0
+
+[[profile]]
+name = "undocked"
+exec = ["notify-send shikane \"You are now undocked\""]
+
+[[profile.output]]
+enable = true
+search = ["n/eDP-[1-9]"]
+mode = "1920x1080@60Hz"
+position = "0,0"
+scale = 1.0
