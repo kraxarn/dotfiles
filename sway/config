@@ -250,13 +250,15 @@ exec_always {
 }
 
 assign [class="jetbrains-rider"] workspace 1
+assign [class="jetbrains-idea"] workspace 1
 assign [app_id="firefox-dev"] workspace 2
 assign [app_id="Slack"] workspace 3
 assign [app_id="spotify-qt"] workspace 4
 assign [app_id="jetbrains-toolbox"] workspace 5
 assign [class="1Password"] workspace 5
 
-exec ~/.local/share/JetBrains/Toolbox/apps/rider/bin/rider
+# exec ~/.local/share/JetBrains/Toolbox/apps/rider/bin/rider
+exec ~/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea
 exec firefox-aurora
 exec slack
 exec spotify-qt
